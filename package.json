@@ -1,0 +1,52 @@
+{
+  "name": "eth-log-decoder",
+  "version": "0.0.1-beta.1",
+  "description": "Simple library to decode ethereum logs",
+  "main": "lib/eth-log-decoder.js",
+  "directories": {
+    "lib": "./lib"
+  },
+  "scripts": {
+    "clean": "rm -rf lib",
+    "build": "npm run pack",
+    "lint": "eslint src/**/*.js",
+    "test": "mocha --require @babel/register --colors ./test/**/*.spec.js",
+    "test:watch": "mocha --require @babel/register --colors -w ./test/**/*.spec.js",
+    "prepublish": "npm run lint && npm run clean && npm run build",
+    "pack": "webpack && webpack --env build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maticnetwork/eth-log-decoder.git"
+  },
+  "keywords": [
+    "ethereum",
+    "web3",
+    "ethers",
+    "truffle"
+  ],
+  "author": "Jaynti Kanani <jd@matic.network>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maticnetwork/eth-log-decoder/issues"
+  },
+  "homepage": "https://github.com/maticnetwork/eth-log-decoder#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "babel-eslint": "^9.0.0",
+    "babel-loader": "^8.0.2",
+    "eslint": "^5.6.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "ethers": "^3.0.28"
+  }
+}
