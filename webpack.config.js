@@ -27,7 +27,8 @@ const config = {
   resolve: {
     modules: [path.resolve("./node_modules"), path.resolve("./src")],
     extensions: [".json", ".js"]
-  }
+  },
+  node: { fs: "empty", child_process: "empty" }
 }
 
 module.exports = config
