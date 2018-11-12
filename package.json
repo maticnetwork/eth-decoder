@@ -1,8 +1,8 @@
 {
-  "name": "eth-log-decoder",
-  "version": "0.0.1-beta.2",
+  "name": "eth-decoder",
+  "version": "0.0.1-beta.1",
   "description": "Simple library to decode ethereum logs and transaction",
-  "main": "lib/eth-log-decoder.js",
+  "main": "lib/eth-decoder.js",
   "directories": {
     "lib": "./lib"
   },
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maticnetwork/eth-log-decoder.git"
+    "url": "git+https://github.com/maticnetwork/eth-decoder.git"
   },
   "keywords": [
     "ethereum",
@@ -28,9 +28,9 @@
   "author": "Jaynti Kanani <jd@matic.network>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maticnetwork/eth-log-decoder/issues"
+    "url": "https://github.com/maticnetwork/eth-decoder/issues"
   },
-  "homepage": "https://github.com/maticnetwork/eth-log-decoder#readme",
+  "homepage": "https://github.com/maticnetwork/eth-decoder#readme",
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.5",

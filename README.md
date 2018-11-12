@@ -1,13 +1,13 @@
-# eth-log-decoder
+# eth-decoder
 
-[![Build Status](https://travis-ci.org/maticnetwork/eth-log-decoder.svg?branch=master)](https://travis-ci.org/maticnetwork/eth-log-decoder)
+[![Build Status](https://travis-ci.org/maticnetwork/eth-decoder.svg?branch=master)](https://travis-ci.org/maticnetwork/eth-decoder)
 
-Simple library to decode ethereum logs and transaction
+Simple library to decode ethereum transaction and logs
 
 ### Install
 
 ```bash
-$ npm install --save eth-log-decoder
+$ npm install --save eth-decoder
 ```
 
 ### Usage
@@ -15,7 +15,7 @@ $ npm install --save eth-log-decoder
 **Log parser**
 
 ```js
-import { LogDecoder } from "eth-log-decoder"
+import { LogDecoder } from "eth-decoder"
 
 const ERC20TokenABI = /* { .... } */ // ABI for ERC20 token contract
 
@@ -35,7 +35,7 @@ console.log(parsedLogs)
 **Tx parser**
 
 ```js
-import { TxDecoder } from "eth-log-decoder"
+import { TxDecoder } from "eth-decoder"
 
 const ERC20TokenABI = /* { .... } */ // ABI for ERC20 token contract
 
