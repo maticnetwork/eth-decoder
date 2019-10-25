@@ -1,6 +1,6 @@
 {
-  "name": "eth-decoder",
-  "version": "0.0.1-beta.2",
+  "name": "@maticnetwork/eth-decoder",
+  "version": "0.0.1",
   "description": "Simple library to decode ethereum logs and transaction",
   "main": "lib/eth-decoder.js",
   "directories": {

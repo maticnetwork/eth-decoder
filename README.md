@@ -7,7 +7,7 @@ Simple library to decode ethereum transaction and logs
 ### Install
 
 ```bash
-$ npm install --save eth-decoder
+$ npm install --save @maticnetwork/eth-decoder
 ```
 
 ### Usage
@@ -15,7 +15,7 @@ $ npm install --save eth-decoder
 **Log parser**
 
 ```js
-import { LogDecoder } from "eth-decoder"
+import { LogDecoder } from "@maticnetwork/eth-decoder"
 
 const ERC20TokenABI = /* { .... } */ // ABI for ERC20 token contract
 
@@ -35,7 +35,7 @@ console.log(parsedLogs)
 **Tx parser**
 
 ```js
-import { TxDecoder } from "eth-decoder"
+import { TxDecoder } from "@maticnetwork/eth-decoder"
 
 const ERC20TokenABI = /* { .... } */ // ABI for ERC20 token contract
 
