@@ -1,16 +1,14 @@
 /* global __dirname, require, module */
 const path = require("path")
-const packageJSON = require("./package.json")
 
-const libraryName = packageJSON.name
 const config = {
   mode: "production",
   entry: `${__dirname}/src/index.js`,
   devtool: "source-map",
   output: {
     path: `${__dirname}/lib`,
-    filename: `${libraryName}.js`,
-    library: libraryName,
+    filename: `eth-decoder.js`,
+    library: "eth-decoder",
     libraryTarget: "umd",
     umdNamedDefine: true,
     globalObject: "typeof self !== 'undefined' ? self : this"
