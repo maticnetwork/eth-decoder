@@ -1,6 +1,6 @@
 # eth-decoder
 
-[![Build Status](https://travis-ci.org/maticnetwork/eth-decoder.svg?branch=master)](https://travis-ci.org/maticnetwork/eth-decoder)
+![Build Status](https://github.com/maticnetwork/eth-decoder/workflows/CI/badge.svg?branch=master)
 
 Simple library to decode ethereum transaction and logs
 
