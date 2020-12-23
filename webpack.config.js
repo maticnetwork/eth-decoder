@@ -1,32 +1,54 @@
 /* global __dirname, require, module */
-const path = require("path")
+const path = require('path')
 
-const config = {
-  mode: "production",
-  entry: `${__dirname}/src/index.js`,
-  devtool: "source-map",
+const libraryName = 'eth-decoder'
+const mode = 'production'
+
+const clientConfig = {
+  mode,
+  entry: `${__dirname}/src/index.ts`,
+  target: 'web',
   output: {
-    path: `${__dirname}/lib`,
-    filename: `eth-decoder.js`,
-    library: "eth-decoder",
-    libraryTarget: "umd",
+    path: `${__dirname}/dist`,
+    filename: `${libraryName}.umd.js`,
+    library: libraryName,
+    libraryTarget: 'umd',
+    libraryExport: 'default',
     umdNamedDefine: true,
-    globalObject: "typeof self !== 'undefined' ? self : this"
   },
   module: {
     rules: [
       {
-        test: /(\.js)$/,
-        loader: "babel-loader",
-        exclude: /(node_modules|bower_components)/
-      }
-    ]
+        test: /\.ts$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+    ],
   },
+  externals: {},
   resolve: {
-    modules: [path.resolve("./node_modules"), path.resolve("./src")],
-    extensions: [".json", ".js"]
+    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+    extensions: ['.json', '.js', '.ts', 'tsx'],
   },
-  node: { fs: "empty", child_process: "empty" }
 }
 
-module.exports = config
+const serverConfig = {
+  ...clientConfig,
+  target: 'node',
+  output: {
+    path: `${__dirname}/dist`,
+    filename: `${libraryName}.node.js`,
+    libraryTarget: 'commonjs2',
+  },
+}
+
+const standaloneConfig = {
+  ...clientConfig,
+  output: {
+    ...clientConfig.output,
+    library: 'EthDecoder',
+    filename: `${libraryName}.js`,
+  }
+}
+
+module.exports = [clientConfig, serverConfig, standaloneConfig]
