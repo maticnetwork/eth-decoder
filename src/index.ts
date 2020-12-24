@@ -3,7 +3,6 @@ import TxDecoder from './tx-decoder'
 import { 
   Interface,
   Fragment,
-  JsonFragment,
   ParsedLogDescription,
 } from './types'
 
@@ -12,6 +11,5 @@ export {
   TxDecoder,
   Interface,
   Fragment,
-  JsonFragment,
   ParsedLogDescription,
 }
